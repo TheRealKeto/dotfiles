@@ -1,0 +1,5 @@
+set hidden
+set drawbox
+set info size:time
+set nohistory
+set autoquit true

@@ -7,12 +7,6 @@ export HISTFILE="$ZDOTDIR/.zshhistory"
 # Use whatever pager is available in PATH
 export PAGER="pager"
 
-# Procursus
-export PROCURSUS="/opt/procursus"
-export NO_PGP=1
-export LIBRARY_PATH="$PROCURSUS/lib:$LIBRARY_PATH"
-export CPATH="$PROCURSUS/include:$CPATH"
-
 # Use Micro as the default editor, if present
 if command -v micro &>/dev/null; then
     export EDITOR="micro"

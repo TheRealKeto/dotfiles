@@ -36,6 +36,12 @@ setopt HIST_SAVE_NO_DUPS
 setopt HIST_FIND_NO_DUPS
 setopt HIST_EXPIRE_DUPS_FIRST
 
+# Add Procursus exports, if available
+if [ -f "/opt/procursus/.procursus_strapped" ]
+then
+    source "$ZDOTDIR/procursus.zsh"
+fi
+
 source "$ZDOTDIR/exports.zsh"
 source "$ZDOTDIR/aliases.zsh"
 source "$ZDOTDIR/suggestions.zsh"

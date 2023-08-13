@@ -1,0 +1,9 @@
+[experimental]
+system-git-client = true
+
+[virtualenvs]
+create = false
+prefer-active-python = true
+
+[installer]
+max-workers = 3

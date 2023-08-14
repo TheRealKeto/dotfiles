@@ -10,5 +10,6 @@
     "ruler": false,
     "savecursor": true,
     "saveundo": true,
-    "tabreverse": false
+    "tabreverse": false,
+    "tabstospaces": true
 }

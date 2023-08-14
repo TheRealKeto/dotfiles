@@ -1,0 +1,14 @@
+{
+    "basename": true,
+    "colorscheme": "twilight",
+    "cursorline": false,
+    "diffgutter": true,
+    "mkparents": true,
+    "multiopen": "vsplit",
+    "parsecursor": true,
+    "rmtrailingws": true,
+    "ruler": false,
+    "savecursor": true,
+    "saveundo": true,
+    "tabreverse": false
+}

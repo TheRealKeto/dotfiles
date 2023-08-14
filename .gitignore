@@ -2,6 +2,7 @@
 .zcompdump
 .zshhistory
 backups
+buffers
 colorschemes
 highlighting.zsh
 plug

@@ -1,5 +1,8 @@
 # I may be wrong to set this on macOS, but whatever
-export XDG_CONFIG_HOME="$HOME/.config"
+case "$(uname -s)" in
+    Darwin) export XDG_CONFIG_HOME="$HOME/.config" ;;
+    *) ;;
+esac
 
 # Use custom history file
 export HISTFILE="$ZDOTDIR/.zshhistory"

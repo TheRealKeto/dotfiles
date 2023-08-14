@@ -1,5 +1,8 @@
-# Use GNU Make over macOS Make
-alias "make=gmake"
+# Always use GNU Make on macOS, if present
+case "$(command -v gmake | xargs basename)" in
+    gmake) alias "make=gmake" ;;
+    *) ;;
+esac
 
 # Other aliases
 alias "ls=lsd -a --icon=never"

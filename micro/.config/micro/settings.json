@@ -3,6 +3,9 @@
     "colorscheme": "twilight",
     "cursorline": false,
     "diffgutter": true,
+    "ft:patch": {
+        "rmtrailingws": false
+    },
     "ft:yaml": {
         "tabsize": 2
     },

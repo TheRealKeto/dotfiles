@@ -7,6 +7,9 @@ esac
 # Use custom history file
 export HISTFILE="$ZDOTDIR/.zshhistory"
 
+# Reflect the output of tty for gpg-agent
+export GPG_TTY="$(tty)"
+
 # Use whatever pager is available in PATH
 export PAGER="pager"
 

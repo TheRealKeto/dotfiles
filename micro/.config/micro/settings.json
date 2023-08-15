@@ -3,6 +3,9 @@
     "colorscheme": "twilight",
     "cursorline": false,
     "diffgutter": true,
+    "ft:yaml": {
+        "tabsize": 2
+    },
     "mkparents": true,
     "multiopen": "vsplit",
     "parsecursor": true,

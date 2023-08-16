@@ -24,6 +24,7 @@ export BAT_PAGER="/usr/bin/less"
 
 # Poetry
 export POETRY_CONFIG_DIR="$XDG_CONFIG_HOME/poetry"
+export POETRY_CACHE_DIR="$POETRY_CONFIG_DIR"
 
 # Golang
 export GOPATH="$XDG_CONFIG_HOME/go"

@@ -1,8 +1,10 @@
 .DS_Store
 .zcompdump
 .zshhistory
+artifacts
 backups
 buffers
+cache
 colorschemes
 highlighting.zsh
 plug

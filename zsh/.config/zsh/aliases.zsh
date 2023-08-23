@@ -1,10 +1,15 @@
-# Always use GNU Make on macOS, if present
-case "$(command -v gmake | xargs basename)" in
-    gmake) alias "make=gmake" ;;
-    *) ;;
-esac
+# Aliases
 
-# Other aliases
-alias "ls=lsd -a --icon=never"
-alias "bat=bat --theme=\"TwoDark\""
-alias "curl=curl --hsts $HOME/.curl_hsts_cache_procursus.txt"
+# Aliases are made so long as whatever something is aliased
+# to is installed, or exists in any way, shape, or form.
+create_alias() {
+    if command -v "$2" &>/dev/null; then
+        alias "$1=$2 $3"
+    fi
+}
+
+create_alias "ls" "lsd" "-a --icon never"
+create_alias "bat" "bat" "--theme \"TwoDark\""
+
+# Always use GNU make on macOS
+create_alias "make" "gmake"

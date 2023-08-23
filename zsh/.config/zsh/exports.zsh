@@ -1,32 +1,38 @@
-# I may be wrong to set this on macOS, but whatever
-case "$(uname -s)" in
-    Darwin) export XDG_CONFIG_HOME="$HOME/.config" ;;
-    *) ;;
-esac
+# Exports
 
-# Use custom history file
-export HISTFILE="$ZDOTDIR/.zshhistory"
+# Establish configuration path regardless of standard
+# I honestly don't care, always use XDG_CONFIG_HOME.
+export CONFIG_HOME="$HOME/.config"
 
-# Reflect the output of tty for gpg-agent
+# Use custom zsh history file
+export HISTFILE="$HOME/.zshhistory"
+
+# Always reflect tty output
+# This is only needed for gpg-agent to work correctly
 export GPG_TTY="$(tty)"
 
-# Use whatever pager is available in PATH
-export PAGER="pager"
+# Set up exports based on availability
+#
+# Much like aliases, only change exports if they're
+# present in PATH or in any way, shape, or form.
+create_export() {
+    if command -v "$2" &>/dev/null; then
+        export "$1"="$2"
+    fi
+}
 
-# Use Micro as the default editor, if present
-if command -v micro &>/dev/null; then
-    export EDITOR="micro"
-    export VISUAL="$EDITOR"
-fi
+# Use micro as the default editor
+create_export "EDITOR" "micro"
+create_export "VISUAL" "EDITOR"
 
-# Force bat pager to use macOS less
+# Force bat to use macOS less
 export BAT_PAGER="/usr/bin/less"
 
 # Poetry
-export POETRY_CONFIG_DIR="$XDG_CONFIG_HOME/poetry"
+export POETRY_CONFIG_DIR="$CONFIG_DIR/poetry"
 export POETRY_CACHE_DIR="$POETRY_CONFIG_DIR"
 
 # Golang
-export GOPATH="$XDG_CONFIG_HOME/go"
+export GOPATH="$CONFIG_HOME/go"
 export GOCACHE="$GOPATH/cache"
 export GOMODCACHE="$GOPATH/cache/mod"

@@ -1,7 +1,6 @@
 # Exports
 
 # Establish configuration path regardless of standard
-# I honestly don't care, always use XDG_CONFIG_HOME.
 export CONFIG_HOME="$HOME/.config"
 
 # Use custom zsh history file
@@ -23,13 +22,10 @@ create_export() {
 
 # Use micro as the default editor
 create_export "EDITOR" "micro"
-create_export "VISUAL" "EDITOR"
-
-# Force bat to use macOS less
-export BAT_PAGER="/usr/bin/less"
+create_export "VISUAL" "$EDITOR"
 
 # Poetry
-export POETRY_CONFIG_DIR="$CONFIG_DIR/poetry"
+export POETRY_CONFIG_DIR="$CONFIG_HOME/poetry"
 export POETRY_CACHE_DIR="$POETRY_CONFIG_DIR"
 
 # Golang

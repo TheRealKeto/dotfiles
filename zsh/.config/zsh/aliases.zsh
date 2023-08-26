@@ -8,7 +8,7 @@ create_alias() {
     fi
 }
 
-create_alias "ls" "lsd" "lsd -a -icon never"
+create_alias "ls" "lsd" "lsd -a --icon never"
 create_alias "bat" "bat" "bat --theme \"TwoDark\""
 
 # Always use GNU make on macOS

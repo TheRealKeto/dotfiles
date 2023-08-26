@@ -20,6 +20,9 @@ create_export() {
     fi
 }
 
+# Use less as the default pager
+create_export "PAGER" "less"
+
 # Use micro as the default editor
 create_export "EDITOR" "micro"
 create_export "VISUAL" "$EDITOR"

@@ -7,6 +7,7 @@
 	d = clean -fd
 	s = switch --force
 	c = commit -ae --no-gpg-sign
+	ap = apply -v
 	cs = commit -ae
 	ce = commit --amend -e
 	da = d -x

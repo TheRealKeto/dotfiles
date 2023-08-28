@@ -6,6 +6,10 @@ export CONFIG_HOME="$HOME/.config"
 # Use custom zsh history file
 export HISTFILE="$HOME/.zshhistory"
 
+# Set larger history save size on all machines
+export HISTSIZE=3000
+export SAVEHIST="$HISTSIZE"
+
 # Always reflect tty output
 # This is only needed for gpg-agent to work correctly
 export GPG_TTY="$(tty)"

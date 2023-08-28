@@ -1,0 +1,15 @@
+[user]
+	name = Keto
+[commit]
+	gpgsign = true
+[alias]
+	l = log -p
+	d = clean -fd
+	s = switch --force
+	c = commit -ae --no-gpg-sign
+	cs = commit -ae
+	ce = commit --amend -e
+	da = d -x
+	lo = log --oneline
+	ls = l --show-signature
+	pa = format-path --root

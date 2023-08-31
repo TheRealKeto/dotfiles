@@ -52,3 +52,12 @@ libpath_prepend() {
 typeset -Tx LIBRARY_PATH libpath
 
 libpath_prepend "/opt/procursus/lib"
+
+# Prepend user configurations to pkg-config
+pcpath_prepend() {
+    [ -d "$1" ] && pcpath=($1 $pcpath)
+}
+
+typeset -Tx PKG_CONFIG_PATH pcpath
+
+pcpath_prepend "$HOME/.local/lib/pkgconfig"

@@ -30,7 +30,7 @@ rpath_prepend() {
     [ -d "$1" ] && rpath=($1 $rpath)
 }
 
-typeset -TUx DYLD_FALLBACK_LIBRARY_PATH rpath
+typeset -Tx DYLD_FALLBACK_LIBRARY_PATH rpath
 
 rpath_prepend "$HOME/.local/lib"
 rpath_prepend "/opt/procursus/lib"
@@ -40,7 +40,7 @@ cpath_prepend() {
     [ -d "$1" ] && cpath=($1 $cpath)
 }
 
-typeset -TUx CPATH cpath
+typeset -Tx CPATH cpath
 
 cpath_prepend "/opt/procursus/include"
 
@@ -49,6 +49,6 @@ libpath_prepend() {
     [ -d "$1" ] && libpath=($1 $libpath)
 }
 
-typeset -TUx LIBRARY_PATH libpath
+typeset -Tx LIBRARY_PATH libpath
 
 libpath_prepend "/opt/procursus/lib"

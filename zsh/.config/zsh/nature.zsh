@@ -32,6 +32,7 @@ rpath_prepend() {
 
 typeset -TUx DYLD_FALLBACK_LIBRARY_PATH rpath
 
+rpath_prepend "$HOME/.local/lib"
 rpath_prepend "/opt/procursus/lib"
 
 # CPATH setup

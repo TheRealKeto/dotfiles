@@ -3,3 +3,5 @@ set drawbox
 set info size:time
 set nohistory
 set autoquit true
+
+cmd open &set -f; :

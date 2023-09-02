@@ -24,8 +24,8 @@ path_prepend "/opt/procursus/bin"
 
 # Other environment variables
 
-# Manipulate the runtime search path so that it's easier
-# for the compiler to find libraries.
+# Manipulate the runtime search fallback path so it's
+# easier for the compiler to find missing libraries.
 rpath_prepend() {
     [ -d "$1" ] && rpath=($1 $rpath)
 }

@@ -6,10 +6,8 @@ source "$HOME/.config/zsh/general.zsh"
 source "$HOME/.config/zsh/exports.zsh"
 source "$HOME/.config/zsh/aliases.zsh"
 
-# Custom source function
-#
-# This is used to quietly source zsh scripts that add
-# extra features to zsh.
+# Use custom source function to source scripts
+# depending on availability.
 source_file() {
     [ -f "$1" ] && source "$1"
 }

@@ -10,17 +10,13 @@ export HISTFILE="$HOME/.zshhistory"
 export HISTSIZE=3000
 export SAVEHIST="$HISTSIZE"
 
-# Always reflect tty output
-# This is only needed for gpg-agent to work correctly
+# Fix PGP signing by always reflecting tty output
 export GPG_TTY="$(tty)"
 
 # Set up exports based on availability
-#
-# Much like aliases, only change exports if they're
-# present in PATH or in any way, shape, or form.
 create_export() {
     if command -v "$2" &>/dev/null; then
-        export "$1"="$2"
+        export "$1=$2"
     fi
 }
 

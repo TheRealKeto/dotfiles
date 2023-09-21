@@ -1,0 +1,12 @@
+# LSD configuration
+
+# Disable icons to support older terminals
+icons:
+  when: never
+
+# Make tree option usable by using specific recursuion depth
+recursion:
+  depth: 1
+
+# Use ASCII arrow to support older terminals
+symlink-arrow: "=>"

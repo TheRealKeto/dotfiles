@@ -4,4 +4,5 @@ set info size:time
 set nohistory
 set autoquit
 
+set cursorpreviewfmt "\033[7m"
 cmd open &set -f; :

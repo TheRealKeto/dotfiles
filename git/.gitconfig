@@ -13,4 +13,4 @@
 	da = d -x
 	lo = log --oneline
 	ls = l --show-signature
-	pa = format-path --root
+	pa = format-patch --root

@@ -7,6 +7,9 @@
     "colorscheme": "twilight",
     "cursorline": false,
     "diffgutter": true,
+    "ft:nix": {
+        "editorconfig": true
+    },
     "ft:c": {
         "tabstospaces": false
     },

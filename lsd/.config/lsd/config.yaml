@@ -8,5 +8,9 @@ icons:
 recursion:
   depth: 1
 
+# Show directories first
+sorting:
+  dir-grouping: first
+
 # Use ASCII arrow to support older terminals
 symlink-arrow: "=>"
